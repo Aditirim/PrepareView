@@ -62,36 +62,36 @@ function Pricing() {
     try {
       setLoadingPlan(plan.id)
 
-      const amount =  
-      plan.id === "basic" ? 100 :
-      plan.id === "pro" ? 500 : 0;
+      const amount =
+        plan.id === "basic" ? 100 :
+          plan.id === "pro" ? 500 : 0;
 
-      const result = await axios.post(ServerUrl + "/api/payment/order" , {
+      const result = await axios.post(ServerUrl + "/api/payment/order", {
         planId: plan.id,
         amount: amount,
         credits: plan.credits,
-      },{withCredentials:true})
-      
+      }, { withCredentials: true })
+
 
       const options = {
-      key: import.meta.env.VITE_RAZORPAY_KEY_ID,
-      amount: result.data.amount,
-      currency: "INR",
-      name: "InterviewIQ.AI",
-      description: `${plan.name} - ${plan.credits} Credits`,
-      order_id: result.data.id,
+        key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+        amount: result.data.amount,
+        currency: "INR",
+        name: "PrepareView",
+        description: `${plan.name} - ${plan.credits} Credits`,
+        order_id: result.data.id,
 
-      handler:async function (response) {
-        const verifypay = await axios.post(ServerUrl + "/api/payment/verify" ,response , {withCredentials:true})
-        dispatch(setUserData(verifypay.data.user))
+        handler: async function (response) {
+          const verifypay = await axios.post(ServerUrl + "/api/payment/verify", response, { withCredentials: true })
+          dispatch(setUserData(verifypay.data.user))
 
           alert("Payment Successful 🎉 Credits Added!");
           navigate("/")
 
-      },
-      theme:{
-        color: "#10b981",
-      },
+        },
+        theme: {
+          color: "#10b981",
+        },
 
       }
 
@@ -100,8 +100,8 @@ function Pricing() {
 
       setLoadingPlan(null);
     } catch (error) {
-     console.log(error)
-     setLoadingPlan(null);
+      console.log(error)
+      setLoadingPlan(null);
     }
   }
 
@@ -194,7 +194,7 @@ function Pricing() {
 
               {!plan.default &&
                 <button
-                disabled={loadingPlan === plan.id}
+                  disabled={loadingPlan === plan.id}
                   onClick={(e) => {
                     e.stopPropagation();
                     if (!isSelected) {

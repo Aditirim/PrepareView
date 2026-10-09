@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎙️ InterviewIQ.AI (PrepareView)
+# 🎙️ PrepareView
 ### *Next-Generation AI-Powered Mock Interview & Career Readiness Platform*
 
 [![React 19](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black)](https://react.dev/)
@@ -11,7 +11,7 @@
 [![Razorpay](https://img.shields.io/badge/Payments-Razorpay-0C2340?logo=razorpay&logoColor=white)](https://razorpay.com/)
 
 <p align="center">
-  <b>InterviewIQ.AI</b> simulates realistic, high-pressure job interviews with real-time conversational voice synthesis, synchronized avatar animation, adaptive LLM question generation, automated resume parsing, and granular performance analytics with downloadable PDF reports.
+  <b>PrepareView</b> simulates realistic, high-pressure job interviews with real-time conversational voice synthesis, synchronized avatar animation, adaptive LLM question generation, automated resume parsing, and granular performance analytics with downloadable PDF reports.
 </p>
 
 </div>
@@ -35,7 +35,7 @@
 
 ## 🌟 Overview & Value Proposition
 
-Traditional interview preparation relies on static flashcards or expensive career coaches. **InterviewIQ.AI** bridges this gap by delivering an end-to-end interactive simulation that mimics an actual panel interview:
+Traditional interview preparation relies on static flashcards or expensive career coaches. **PrepareView** bridges this gap by delivering an end-to-end interactive simulation that mimics an actual panel interview:
 
 - **Adaptive Questioning**: Synthesizes custom questions based on candidate role, seniority, and uploaded resume text.
 - **Natural Voice Interaction**: Real-time browser-based Speech-to-Text (STT) and low-latency Text-to-Speech (TTS) with human-like prosody.
