@@ -14,7 +14,7 @@ const __dirname = path.resolve()
 
 const app = express()
 app.use(cors({
-    origin:"https://prepareview.onrender.com/",
+    origin:"https://prepareview.onrender.com",
     credentials:true
 }))
 
