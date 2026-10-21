@@ -7,8 +7,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "nodemon server/index.js",
+    "build":" npm install && npm install --prefix client && npm run build --prefix client",
+    "start": "nodemon server/index.js"
   },
   "dependencies": {
     "axios": "^1.13.5",

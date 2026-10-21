@@ -8,10 +8,13 @@ import authRouter from "./routes/auth.route.js"
 import userRouter from "./routes/user.route.js"
 import interviewRouter from "./routes/interview.route.js"
 import paymentRouter from "./routes/payment.route.js"
+import path from "path"
+
+const __dirname = path.resolve()
 
 const app = express()
 app.use(cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin:"http://localhost:5173",
     credentials:true
 }))
 
@@ -23,6 +26,10 @@ app.use("/api/user", userRouter)
 app.use("/api/interview" , interviewRouter)
 app.use("/api/payment" , paymentRouter)
 
+app.use(express.static(path.join(__dirname, "/client/dist")))
+app.get("/{*splat}", (_,res)=>{
+    res.sendFile(path.resolve(__dirname, "client","dist", "index.html"))
+})
 const PORT = process.env.PORT || 6000
 app.listen(PORT , ()=>{
     console.log(`Server running on port ${PORT}`)
